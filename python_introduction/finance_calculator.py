@@ -1,5 +1,5 @@
-income = int(input("Enter your monthly inome:"))
-expenses = int(input("Enter your totalmontly expenses:"))
+income = int(input("Enter your monthly income:"))
+expenses = int(input("Enter your total monthly expenses:"))
 savings = income - expenses
 anualsaving = savings * 12 + (savings * 12 * 0.05)
 print(f"Your monthly savigns are ${savings}")
