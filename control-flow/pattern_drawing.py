@@ -1,4 +1,4 @@
-number = int(input("Enter a number to see its multiplication table: "))
+number = int(input("Enter the size of the pattern: "))
 
 for x in range(number):
     print("")
