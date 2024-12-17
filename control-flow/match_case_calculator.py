@@ -1,12 +1,12 @@
 num1 = int(input("Enter the first number: "))
 num2 = int(input("Enter the second number: "))
-operator = input("Choose the operation (+, -, *, /): ")
+operation = input("Choose the operation (+, -, *, /): ")
 result = 0;
 
 if num2 == 0 and operator == '/':
     print("Cannot divid by zero.")
 else:
-    match operator:
+    match operation:
         case '+':
             result = num1 + num2
         case '-':
