@@ -1,7 +1,7 @@
 from shopping_list_manager import *
 
 def main():
-    shopping_list = []
+    
     while True:
         display_menu()
         choice = input("Enter your choice: ")
