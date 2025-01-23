@@ -7,7 +7,7 @@ class Book:
         self.author = author
 
     def __str__(self):
-        return f"{__class__.__name__}: {self.title} by Author {self.author}"
+        return f"{__class__.__name__}: {self.title} by {self.author}"
 
 # Derived Class: EBook
 class EBook(Book):
@@ -16,7 +16,7 @@ class EBook(Book):
         self.file_size = file_size
 
     def __str__(self):
-        return f"{__class__.__name__}: {self.title} by Author {self.author}, File Size: {self.file_size}KB"
+        return f"{__class__.__name__}: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 # Derived Class: PrintBook
 class PrintBook(Book):
@@ -25,7 +25,7 @@ class PrintBook(Book):
         self.page_count = page_count
 
     def __str__(self):
-        return f"{__class__.__name__}: {self.title} by Author {self.author}, Page Count: {self.page_count}"
+        return f"{__class__.__name__}: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 # Composition: Library
 class Library:
@@ -35,11 +35,7 @@ class Library:
     def add_book(self, book):
         if isinstance(book, Book):
             self.books.append(book)
-        else:
-            raise TypeError("Only Book, EBook, or PrintBook can be added to the library.")
        
     def list_books(self):
-        if not self.books:
-            print("Book cannot be found.")
         for book in self.books:
             print(book)
