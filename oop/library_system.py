@@ -35,7 +35,11 @@ class Library:
     def add_book(self, book):
         if isinstance(book, Book):
             self.books.append(book)
+        else:
+            raise TypeError("Only Book, EBook, or PrintBook can be added to the library.")
        
     def list_books(self):
+        if not self.books:
+            print("Book cannot be found.")
         for book in self.books:
             print(book)
